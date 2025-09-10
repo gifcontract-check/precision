@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-1",
+      "description": "A close-up of eyelash extensions.",
+      "imageUrl": "https://picsum.photos/seed/lash/1920/1080",
+      "imageHint": "eyelash extensions"
+    },
+    {
+      "id": "hero-2",
+      "description": "A perfectly done manicure.",
+      "imageUrl": "https://picsum.photos/seed/nails/1920/1080",
+      "imageHint": "manicure nails"
+    },
+    {
+      "id": "hero-3",
+      "description": "A woman with beautifully shaped eyebrows.",
+      "imageUrl": "https://picsum.photos/seed/brows/1920/1080",
+      "imageHint": "eyebrow shaping"
+    },
+    {
+      "id": "about-image",
+      "description": "The interior of a modern and chic beauty salon.",
+      "imageUrl": "https://picsum.photos/seed/salon/800/600",
+      "imageHint": "beauty salon"
+    }
+  ]
 }
