@@ -47,7 +47,7 @@ const testimonials = [
 ];
 
 
-export default async function Testimonials() {
+export default function Testimonials() {
 
   return (
     <section id="avis" className="w-full py-16 md:py-24 lg:py-32 bg-secondary">

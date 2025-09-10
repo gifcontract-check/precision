@@ -1,4 +1,5 @@
 import { Logo } from "@/components/logo";
+import { siteConfig } from "@/config/site";
 import { Clock, Instagram, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
@@ -31,7 +32,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-2">
              <h3 className="font-semibold text-lg">Suivez-nous</h3>
-             <Link href="https://www.instagram.com/precision.institut/?hl=fr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+             <Link href={siteConfig.links.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Instagram className="h-5 w-5" />
                 <span>Instagram</span>
              </Link>
