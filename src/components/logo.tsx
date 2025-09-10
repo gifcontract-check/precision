@@ -7,7 +7,7 @@ type LogoProps = {
 
 export function Logo({ className }: LogoProps) {
   return (
-    <Link href="/" className={cn("text-xl font-bold tracking-tight text-primary", className)}>
+    <Link href="/" className={cn("text-xl font-bold tracking-tight", className)}>
       Précision Institut
     </Link>
   );

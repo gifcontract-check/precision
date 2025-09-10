@@ -57,7 +57,7 @@ export default function Header() {
                 href={link.href}
                 className={cn(
                   "relative text-sm font-medium transition-colors hover:text-primary group",
-                  isScrolled ? "text-foreground" : "text-primary-foreground hover:text-accent"
+                  isScrolled ? "text-foreground" : "text-primary-foreground hover:text-accent-foreground"
                 )}
               >
                 {link.label}
