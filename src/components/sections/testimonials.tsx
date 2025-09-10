@@ -9,11 +9,28 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote } from "lucide-react";
 
+const fallbackTestimonials = [
+    "Safia est une véritable artiste ! Mes extensions de cils sont toujours parfaites, naturelles et tiennent incroyablement bien. Je ne pourrais plus m'en passer !",
+    "J'ai testé la manucure russe et je suis bluffée par la précision du travail. Mes ongles n'ont jamais été aussi beaux et soignés. L'accueil est toujours chaleureux.",
+    "Le rehaussement de cils a complètement transformé mon regard. C'est la solution idéale pour un effet maquillé sans effort. Merci pour ces conseils précieux !",
+    "Une formation très complète et enrichissante. Safia est une formatrice pédagogue et passionnée, qui partage son savoir-faire avec générosité. Je recommande vivement !",
+    "Institut très professionnel et à l'écoute. Que ce soit pour mes sourcils ou une manucure, le résultat est toujours à la hauteur de mes attentes. Une adresse incontournable à Lille."
+];
+
 export default async function Testimonials() {
-  const { testimonials } = await generateCustomerTestimonials({
-    numberOfTestimonials: 20,
-    keywords: "extensions de cils, réhaussement de cils, onglerie, manucure russe, sourcils",
-  });
+  let testimonials = fallbackTestimonials;
+  try {
+    const result = await generateCustomerTestimonials({
+      numberOfTestimonials: 20,
+      keywords: "extensions de cils, réhaussement de cils, onglerie, manucure russe, sourcils",
+    });
+    if (result.testimonials && result.testimonials.length > 0) {
+      testimonials = result.testimonials;
+    }
+  } catch (error) {
+    console.error("Failed to generate testimonials, using fallback.", error);
+  }
+
 
   return (
     <section id="avis" className="w-full py-16 md:py-24 lg:py-32 bg-secondary">
