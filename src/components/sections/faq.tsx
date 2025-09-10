@@ -12,7 +12,7 @@ const faqItems = [
   },
   {
     question: "Comment puis-je m'inscrire à une formation ?",
-    answer: "Pour vous inscrire, vous pouvez nous appeler directement au 06 12 34 56 78 ou utiliser le formulaire de contact pour toute question préalable. Nous vous guiderons à travers les étapes d'inscription.",
+    answer: "Pour vous inscrire, vous pouvez nous appeler directement au 07 62 23 69 51 ou utiliser le formulaire de contact pour toute question préalable. Nous vous guiderons à travers les étapes d'inscription.",
   },
   {
     question: "Proposez-vous des facilités de paiement pour les formations ?",

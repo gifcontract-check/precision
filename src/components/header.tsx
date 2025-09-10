@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -56,11 +56,12 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
+                  "relative text-sm font-medium transition-colors hover:text-primary group",
                   isScrolled ? "text-foreground" : "text-primary-foreground hover:text-accent"
                 )}
               >
                 {link.label}
+                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </div>
@@ -97,29 +98,15 @@ export default function Header() {
       </nav>
 
       <div className="relative h-screen w-full">
-        <Carousel className="h-full w-full" opts={{ loop: true }}>
-          <CarouselContent>
-            {heroImages.map((image, index) => (
-              <CarouselItem key={index}>
-                <div className="relative h-screen w-full">
-                  <Image
-                    src={image.imageUrl}
-                    alt={image.description}
-                    fill
-                    className="object-cover"
-                    priority={index === 0}
-                    data-ai-hint={image.imageHint}
-                  />
-                  <div className="absolute inset-0 bg-black/50" />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
-            <CarouselPrevious className="static translate-y-0 text-white hover:text-primary border-white hover:bg-white" />
-            <CarouselNext className="static translate-y-0 text-white hover:text-primary border-white hover:bg-white" />
-          </div>
-        </Carousel>
+        <Image
+          src="https://cdn.beacons.ai/user_content/zt7DSUT5syTGSXn4yV1sZY6Klnn1/referenced_images/4af3da12-d0b9-45e2-9a3e-d6b45a5c2bf5__store__product-image__b4dd91fc-9038-4ecb-8fdc-1eadd25690b6__929ce39e-dd23-4055-b7cf-e89bfad6d8fd.webp?t=1757513633280"
+          alt="Bannière de l'institut"
+          fill
+          className="object-cover"
+          priority
+          data-ai-hint="beauty salon interior"
+        />
+        <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-7xl">
