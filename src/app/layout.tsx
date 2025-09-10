@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className="scroll-smooth dark">
+    <html lang="fr" className="scroll-smooth">
       <head>
         <link rel="icon" href="https://cdn.beacons.ai/user_content/zt7DSUT5syTGSXn4yV1sZY6Klnn1/referenced_images/434e06c0-a246-47a1-a8f7-0026feac7798__store__product-image__b4dd91fc-9038-4ecb-8fdc-1eadd25690b6__8e69c470-691b-4a80-92a0-a19981fedf76.webp?t=1757518304890" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
