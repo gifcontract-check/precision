@@ -29,24 +29,12 @@ const navLinks = [
 const heroImages = PlaceHolderImages.filter((img) => img.id.startsWith("hero-"));
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <header className="relative">
       <nav
-        className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-          isScrolled ? "bg-background/90 shadow-md backdrop-blur-sm" : "bg-transparent"
-        )}
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/90 shadow-md backdrop-blur-sm"
       >
         <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
           <Logo />
@@ -55,10 +43,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={cn(
-                  "relative text-sm font-medium transition-colors hover:text-primary group",
-                  isScrolled ? "text-foreground" : "text-primary-foreground hover:text-primary"
-                )}
+                className="relative text-sm font-medium transition-colors text-foreground hover:text-primary group"
               >
                 {link.label}
                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -68,7 +53,7 @@ export default function Header() {
           <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className={cn(isScrolled ? "text-primary": "text-primary-foreground hover:bg-white/10")}>
+                <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-white/10">
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Ouvrir le menu</span>
                 </Button>
