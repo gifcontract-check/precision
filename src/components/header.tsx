@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu } from "lucide-react";
+import { Menu, Moon, Sun } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -17,6 +17,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Logo } from "@/components/logo";
+import { ThemeToggle } from "./theme-toggle";
 
 const navLinks = [
   { href: "#about", label: "Horaires" },
@@ -30,29 +31,47 @@ const heroImages = PlaceHolderImages.filter((img) => img.id.startsWith("hero-"))
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [hasScrolled, setHasScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header className="relative">
       <nav
-        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black text-white"
+        className={cn(
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+          hasScrolled ? "bg-background shadow-md" : "bg-transparent"
+        )}
       >
-        <div className="container mx-auto flex h-20 items-center justify-end px-4 md:px-6">
+        <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
+          <div></div>
           <div className="hidden items-center gap-6 md:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative text-sm font-medium transition-colors text-white hover:text-primary group"
+                className={cn("relative text-sm font-medium transition-colors", 
+                  hasScrolled ? "text-foreground" : "text-white",
+                  "hover:text-primary group"
+                )}
               >
                 {link.label}
                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
+            <ThemeToggle />
           </div>
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-4">
+             <ThemeToggle />
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-white/10">
+                <Button variant="ghost" size="icon" className={cn(hasScrolled ? "text-foreground" : "text-white", "hover:bg-white/10")}>
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Ouvrir le menu</span>
                 </Button>
