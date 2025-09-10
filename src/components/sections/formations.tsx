@@ -1,26 +1,31 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Eye, Sunrise, Paintbrush, Sparkles, PenTool } from "lucide-react";
+import Image from "next/image";
 
 const formations = [
   {
     title: "Extensions de Cils",
-    icon: <Eye className="w-8 h-8 text-primary" />,
+    image: "https://cdn.beacons.ai/user_content/zt7DSUT5syTGSXn4yV1sZY6Klnn1/referenced_images/0b74d3cd-afd8-4de4-8fa9-975a87bed60f__store__product-image__b4dd91fc-9038-4ecb-8fdc-1eadd25690b6__aa0c2872-7ea5-45b1-b64e-69673e9c20c9.webp?t=1757514240037",
+    hint: "eyelash extensions"
   },
   {
     title: "Réhaussement de Cils",
-    icon: <Sunrise className="w-8 h-8 text-primary" />,
+    image: "https://cdn.beacons.ai/user_content/zt7DSUT5syTGSXn4yV1sZY6Klnn1/referenced_images/7c0d513c-eee0-4bcb-9a35-21385cfeb5be__store__product-image__b4dd91fc-9038-4ecb-8fdc-1eadd25690b6__4ceb02fa-35ae-4db9-bed7-3083359d812a.webp?t=1757514295959",
+    hint: "lash lift"
   },
   {
     title: "Onglerie",
-    icon: <Paintbrush className="w-8 h-8 text-primary" />,
+    image: "https://cdn.beacons.ai/user_content/zt7DSUT5syTGSXn4yV1sZY6Klnn1/referenced_images/c49fa422-ac7a-4037-b28c-3c6f168e38cd__store__product-image__b4dd91fc-9038-4ecb-8fdc-1eadd25690b6__cdeb0a4a-ec7d-4827-911a-162ae8af5b05.webp?t=1757514347384",
+    hint: "manicure nails"
   },
   {
     title: "Manucure Russe",
-    icon: <Sparkles className="w-8 h-8 text-primary" />,
+    image: "https://cdn.beacons.ai/user_content/zt7DSUT5syTGSXn4yV1sZY6Klnn1/referenced_images/45835d26-80cf-42be-9cc3-780f2901bbbd__store__product-image__b4dd91fc-9038-4ecb-8fdc-1eadd25690b6__cb049eac-563a-4c5a-a5c6-4cbf014713ce.webp?t=1757514372159",
+    hint: "russian manicure"
   },
   {
     title: "Sourcils",
-    icon: <PenTool className="w-8 h-8 text-primary" />,
+    image: "https://cdn.beacons.ai/user_content/zt7DSUT5syTGSXn4yV1sZY6Klnn1/referenced_images/7c2aa17f-ce68-43de-bfc4-3aec23a5941f__store__product-image__b4dd91fc-9038-4ecb-8fdc-1eadd25690b6__49f28c5a-90c7-4cc0-983e-9bb78c661445.webp?t=1757514508171",
+    hint: "eyebrow shaping"
   },
 ];
 
@@ -40,13 +45,19 @@ export default function Formations() {
         </div>
         <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 pt-12">
           {formations.map((formation) => (
-            <Card key={formation.title} className="text-center group hover:shadow-xl transition-shadow">
-              <CardHeader className="items-center">
-                <div className="bg-accent rounded-full p-4 group-hover:scale-110 transition-transform">
-                    {formation.icon}
+            <Card key={formation.title} className="text-center group hover:shadow-xl transition-shadow overflow-hidden">
+              <CardHeader className="p-0">
+                <div className="relative w-full h-48">
+                    <Image 
+                        src={formation.image} 
+                        alt={formation.title} 
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-ai-hint={formation.hint}
+                    />
                 </div>
               </CardHeader>
-              <CardContent>
+              <CardContent className="p-4">
                 <CardTitle className="text-lg">{formation.title}</CardTitle>
               </CardContent>
             </Card>
