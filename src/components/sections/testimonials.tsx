@@ -11,37 +11,37 @@ import { Quote, Star } from "lucide-react";
 const testimonials = [
     {
       name: "Chloé L.",
-      email: "c***l@example.com",
+      email: "c***l@gmail.com",
       text: "Venue plusieurs fois cette année, car loin de mon institut parisien habituel, je n’ai jamais pris le temps de laisser un avis. Garde l’épaisseur du sourcil, rendu très naturel, à l’écoute et dans le détail. Merci pour toutes les fois où vous m’avez reçue, et pris soin de mes sourcils que j’aime naturels. Je recommande ! ✨"
     },
     {
       name: "Manon D.",
-      email: "m***d@example.com",
+      email: "m***d@outlook.fr",
       text: "Je suis absolument ravie de ma pose de cils à cils réalisée par Marie ! Elle est à la fois douce, professionnelle et très minutieuse. Le résultat est naturel, élégant et exactement ce que je souhaitais. Merci encore pour ce moment de détente et pour ton savoir-faire. Je recommande les yeux fermés !"
     },
     {
       name: "Laura B.",
-      email: "l***b@example.com",
+      email: "l***b@gmail.com",
       text: "Un grand merci à Nesrine et Marie qui se sont occupé de moi et ma copine après des dégâts réalisés par une prestataire incompétente. Un accueil et une prise en charge super chaleureux et elle m’ont sauvé pour mon mariage !!! Je recommande les yeux fermés"
     },
     {
       name: "Juliette F.",
-      email: "j***f@example.com",
+      email: "j***f@outlook.fr",
       text: "Superbe expérience avec Nesrine, adorable et compétente. Mes cils naturels sont blonds et fins et je ressors avec un regard + marqué ! Je conseille le rehaussement Yumi et la teinture."
     },
     {
       name: "Emma G.",
-      email: "e***g@example.com",
+      email: "e***g@gmail.com",
       text: "La formation en onglerie a dépassé toutes mes attentes. Les formatrices sont des expertes passionnées et le suivi est incroyable. Je me sens prête à lancer ma carrière !"
     },
     {
       name: "Inès T.",
-      email: "i***t@example.com",
+      email: "i***t@outlook.fr",
       text: "Le rehaussement de cils est parfait, le résultat est bluffant de naturel. L'équipe est adorable et très professionnelle. C'est mon nouveau rendez-vous beauté incontournable."
     },
     {
       name: "Léa M.",
-      email: "l***m@example.com",
+      email: "l***m@gmail.com",
       text: "J'ai suivi la formation manucure russe et je suis impressionnée par la précision de la technique enseignée. Une vraie valeur ajoutée pour mes services."
     }
 ];

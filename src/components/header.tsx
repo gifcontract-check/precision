@@ -19,7 +19,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Logo } from "@/components/logo";
 
 const navLinks = [
-  { href: "#about", label: "À propos" },
+  { href: "#about", label: "Horaires" },
   { href: "#formations", label: "Formations" },
   { href: "#avis", label: "Avis" },
   { href: "#faq", label: "FAQ" },
