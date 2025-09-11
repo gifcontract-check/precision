@@ -2,6 +2,7 @@ import { Logo } from "@/components/logo";
 import { siteConfig } from "@/config/site";
 import { Clock, Instagram, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const contactInfo = [
     { icon: <MapPin className="h-5 w-5" />, text: "188 rue Solférino, Lille" },
@@ -38,8 +39,16 @@ export default function Footer() {
              </Link>
         </div>
       </div>
-      <div className="container mx-auto px-4 md:px-6 mt-8 pt-8 border-t">
-        <p className="text-center text-sm text-muted-foreground">
+      <div className="container mx-auto px-4 md:px-6 mt-8 pt-8 border-t flex flex-col items-center text-center">
+        <div className="relative h-24 w-full max-w-lg mb-4">
+            <Image 
+                src="https://cdn.beacons.ai/user_content/zt7DSUT5syTGSXn4yV1sZY6Klnn1/referenced_images/1fd7f938-4e60-4158-a3e4-8b493f8b13f2__store__product-image__b4dd91fc-9038-4ecb-8fdc-1eadd25690b6__803ca42b-eca1-4351-a08d-d5c980ca829c.webp?t=1757606574554"
+                alt="Certification"
+                fill
+                className="object-contain"
+            />
+        </div>
+        <p className="text-sm text-muted-foreground">
           © {new Date().getFullYear()} Précision Institut. Tous droits réservés.
         </p>
       </div>
