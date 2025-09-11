@@ -3,7 +3,6 @@ import Contact from '@/components/sections/contact';
 import Faq from '@/components/sections/faq';
 import Footer from '@/components/sections/footer';
 import Formations from '@/components/sections/formations';
-import PdfCta from '@/components/sections/pdf-cta';
 import Testimonials from '@/components/sections/testimonials';
 
 export default function Home() {
@@ -12,7 +11,6 @@ export default function Home() {
       <Header />
       <main>
         <Formations />
-        <PdfCta />
         <Testimonials />
         <Faq />
         <Contact />
