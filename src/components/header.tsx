@@ -100,7 +100,7 @@ export default function Header() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-7xl">
-              Précision Institut
+              CENTRE DE FORMATION PRECISION LILLE
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-200 md:text-xl">
               Votre centre de formation beauté d'excellence à Lille.
