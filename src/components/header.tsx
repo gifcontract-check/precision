@@ -3,31 +3,19 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, Moon, Sun } from "lucide-react";
+import { Menu } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Logo } from "@/components/logo";
 import { ThemeToggle } from "./theme-toggle";
 
 const navLinks = [
-  { href: "#about", label: "Horaires" },
   { href: "#formations", label: "Formations" },
   { href: "#avis", label: "Avis" },
   { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },
 ];
-
-const heroImages = PlaceHolderImages.filter((img) => img.id.startsWith("hero-"));
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
@@ -99,7 +87,7 @@ export default function Header() {
         </div>
       </nav>
 
-      <div className="relative h-screen w-full">
+      <div className="relative h-[60vh] w-full">
         <Image
           src="https://cdn.beacons.ai/user_content/zt7DSUT5syTGSXn4yV1sZY6Klnn1/referenced_images/4af3da12-d0b9-45e2-9a3e-d6b45a5c2bf5__store__product-image__b4dd91fc-9038-4ecb-8fdc-1eadd25690b6__929ce39e-dd23-4055-b7cf-e89bfad6d8fd.webp?t=1757513633280"
           alt="Bannière de l'institut"

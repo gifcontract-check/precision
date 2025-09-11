@@ -10,7 +10,7 @@ export type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  name: "Précision Institut",
+  name: "formations précisions",
   description: "Centre de formation beauté à Lille. Formations en extensions de cils, onglerie et plus.",
   url: "https://precison-institut.com",
   ogImage: "https://precison-institut.com/og.jpg",
