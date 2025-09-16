@@ -71,7 +71,7 @@ export default function Formations() {
                   <Button asChild size="sm" className="w-full">
                     <Link href={formation.pdfLink} target="_blank" rel="noopener noreferrer">
                       <Download className="mr-2 h-4 w-4" />
-                      Détails
+                      Programme
                     </Link>
                   </Button>
                 ) : (
