@@ -39,7 +39,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-2">
             <h3 className="font-semibold text-lg">Légal</h3>
-            <Link href="/cgv" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+            <Link href="https://drive.google.com/file/d/1icO-tEnl006kDuXGqWb-yNtrn_QzbTiz/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <FileText className="h-5 w-5" />
                 <span>Conditions Générales de Vente</span>
             </Link>
