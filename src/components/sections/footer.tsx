@@ -1,6 +1,6 @@
 import { Logo } from "@/components/logo";
 import { siteConfig } from "@/config/site";
-import { Clock, Instagram, MapPin, Phone } from "lucide-react";
+import { Clock, Instagram, MapPin, Phone, FileText } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -12,8 +12,8 @@ const contactInfo = [
 export default function Footer() {
   return (
     <footer className="w-full bg-card border-t py-12">
-      <div className="container mx-auto px-4 md:px-6 grid gap-8 md:grid-cols-3">
-        <div className="flex flex-col gap-4">
+      <div className="container mx-auto px-4 md:px-6 grid gap-8 md:grid-cols-4">
+        <div className="flex flex-col gap-4 md:col-span-1">
           <Logo />
           <p className="text-sm text-muted-foreground">
             Le centre de formation d'excellence pour les métiers de la beauté.
@@ -36,6 +36,13 @@ export default function Footer() {
                 <Instagram className="h-5 w-5" />
                 <span>Instagram</span>
              </Link>
+        </div>
+        <div className="flex flex-col gap-2">
+            <h3 className="font-semibold text-lg">Légal</h3>
+            <Link href="/cgv" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                <FileText className="h-5 w-5" />
+                <span>Conditions Générales de Vente</span>
+            </Link>
         </div>
       </div>
       <div className="container mx-auto px-4 md:px-6 mt-8 pt-8 border-t flex flex-col items-center text-center">
