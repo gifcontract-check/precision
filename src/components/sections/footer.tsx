@@ -1,6 +1,6 @@
 import { Logo } from "@/components/logo";
 import { siteConfig } from "@/config/site";
-import { Clock, Instagram, MapPin, Phone, FileText, Accessibility } from "lucide-react";
+import { Clock, Instagram, MapPin, Phone, FileText, Accessibility, Ear, Eye, Brain } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -47,8 +47,13 @@ export default function Footer() {
       </div>
       <div className="container mx-auto px-4 md:px-6 mt-8 pt-8 border-t flex flex-col items-center text-center">
         <div className="mb-6 flex flex-col items-center text-center">
-          <div className="flex items-center gap-3 text-muted-foreground">
+          <div className="flex items-center gap-4 text-muted-foreground mb-2">
             <Accessibility className="h-6 w-6" />
+            <Ear className="h-6 w-6" />
+            <Eye className="h-6 w-6" />
+            <Brain className="h-6 w-6" />
+          </div>
+          <div className="flex items-center gap-3 text-muted-foreground">
             <span>Référent handicap : Safia Bensaad</span>
           </div>
         </div>
