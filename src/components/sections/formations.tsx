@@ -9,7 +9,7 @@ const formations = [
     title: "Extensions de Cils",
     image: "https://cdn.beacons.ai/user_content/zt7DSUT5syTGSXn4yV1sZY6Klnn1/referenced_images/0b74d3cd-afd8-4de4-8fa9-975a87bed60f__store__product-image__b4dd91fc-9038-4ecb-8fdc-1eadd25690b6__aa0c2872-7ea5-45b1-b64e-69673e9c20c9.webp?t=1757514240037",
     hint: "eyelash extensions",
-    pdfLink: "#"
+    pdfLink: "https://drive.google.com/file/d/10iRhh4ZHD_oMGk3sZuDov2pfMD1I3rMx/view?usp=sharing"
   },
   {
     title: "Réhaussement de Cils",
