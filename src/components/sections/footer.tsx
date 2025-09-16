@@ -7,7 +7,6 @@ import Image from "next/image";
 const contactInfo = [
     { icon: <MapPin className="h-5 w-5" />, text: "188 rue Solférino, Lille" },
     { icon: <Phone className="h-5 w-5" />, text: "07 62 23 69 51 (pour inscriptions)" },
-    { icon: <Clock className="h-5 w-5" />, text: "Lundi-Samedi : 10h-18h | Dimanche : Fermé" },
 ];
 
 export default function Footer() {
@@ -49,7 +48,7 @@ export default function Footer() {
             />
         </div>
         <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Précision Institut. Tous droits réservés.
+          © {new Date().getFullYear()} Formation précision. Tous droits réservés.
         </p>
       </div>
     </footer>
