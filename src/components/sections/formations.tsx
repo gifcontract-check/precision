@@ -27,7 +27,7 @@ const formations = [
     title: "Manucure Russe",
     image: "https://cdn.beacons.ai/user_content/zt7DSUT5syTGSXn4yV1sZY6Klnn1/referenced_images/45835d26-80cf-42be-9cc3-780f2901bbbd__store__product-image__b4dd91fc-9038-4ecb-8fdc-1eadd25690b6__cb049eac-563a-4c5a-a5c6-4cbf014713ce.webp?t=1757514372159",
     hint: "russian manicure",
-    pdfLink: "#"
+    pdfLink: "https://drive.google.com/file/d/189PCu6Yf6npDatEr19pwy89-JEcyHhIr/view?usp=sharing"
   },
   {
     title: "Sourcils",
