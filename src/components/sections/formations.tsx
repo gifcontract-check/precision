@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
+import { Download, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -67,12 +67,21 @@ export default function Formations() {
               </CardHeader>
               <CardContent className="p-4 flex flex-col flex-grow justify-between">
                 <CardTitle className="text-lg mb-4">{formation.title}</CardTitle>
-                <Button asChild size="sm" className="w-full">
-                  <Link href={formation.pdfLink} target="_blank" rel="noopener noreferrer">
-                    <Download className="mr-2 h-4 w-4" />
-                    Détails
-                  </Link>
-                </Button>
+                {formation.pdfLink !== "#" ? (
+                  <Button asChild size="sm" className="w-full">
+                    <Link href={formation.pdfLink} target="_blank" rel="noopener noreferrer">
+                      <Download className="mr-2 h-4 w-4" />
+                      Détails
+                    </Link>
+                  </Button>
+                ) : (
+                  <Button asChild size="sm" className="w-full">
+                    <a href="tel:0762236951">
+                      <Phone className="mr-2 h-4 w-4" />
+                      Appeler
+                    </a>
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}
